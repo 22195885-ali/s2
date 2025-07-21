@@ -1,0 +1,77 @@
+1. hafta
+23 haziran 1. gün
+çalışma ekibimizle tanıştırıldık ve staj arkadaşlarımla tanıştık çalışma ortamımızı öğrendik 
+yemek kartımızı aldık, 
+
+24 haziran 2. gün
+çalışma ekipmanlarımız bize sağlandı (windows yüklü mac)
+çalışmamız için gereken programlar bize öğretildi (XAMPP, github, trello, visual studio)
+projemizin back-end kısmına başladık, xampp kullanarak veritabanı oluşturduk
+visual studio ile veritabanı bağlantı kodumuzu yazıp bağlantımızı test ettik
+başarılı bağlantı sonrasında veritabanımıza tabloları ekledik
+tablolarımıza denemek amaçlı veriler ekledik
+
+25 haziran 3. gün
+Postman uygulamasını kullanmayı öğrendik ve bilgisayarımza yükledik
+postman aracılığı ile veritabanımızdaki verileri güncelleme, silme ve eklemeyi öğrendik.
+veritabanımızın rooms tablosunda detaylı işlem yapabilmek için rooms.php dosyasını oluşturduk
+veritabanımızın reservations tablosunda detaylı işlem yapabilmek için reservations.php dosyasını oluşturduk
+bu kodların içine postmanin çalışabilmesi için post ve case gibi metodları ekledik.
+stajyer arkadaşlar ile odamıza gün sayacı yaptık, her gün bittiğinde bir çarpı attık
+
+26 haziran 4. gün
+reservations tablosuna postman ile eklediğimiz verilerin direkt olarak pending durumunda eklenmesini sağlayan kodu yazdık
+reservations.php dosyasındaki GET metodunu, bir akademisyenin sadece kendi rezervasyonlarını görebileceği şekilde güncelledik
+bir akademisyenin, yalnızca kendisine ait olan ve henüz onaylanmamış (pending statüsündeki) bir rezervasyonu iptal edebilmesini sağlayan kodu yazdık
+http durum kodlarını öğrendik (200, 201, 400, 401 vb)
+yeni rezervasyon talebi veritabanına eklenmeden önce, hedeflenen odanın istenen tarih ve saat aralığında müsait olup olmadığını sunucu tarafında kontrol eden fonksiyon yazdık
+bir akademisyenin, talep ettiği tarih ve saat aralığında zaten başka bir rezervasyonu olup olmadığını kontrol eden fonksiyon yazdık
+
+27 haziran 5. gün
+bugün kodumuzu güvenlik amacıyla geliştirmek için authentication varyasyonlarını öğrendik (basic authentication, api key authentication ve JWT) ve projemizdeki dosyaları güçlendirmek amacıyla JWT yöntemini tercih ettik
+JWT kütüphanelerini manuel olarak indirip projemize entegre ettik
+login.php dosyamızı oluşturduk ve şifreleri hashlemeyi öğrendik, bu yöntem şifrelerin veritabanında yazı olarak gözükmesini engeller
+Postman ile login.php'mizi kullanar admin ve lecturer hesaplarına giriş yaparak elde ettiğimiz tokenin geçerliliğini JWT.io websitesinden kontrol ettik
+Sistem uzmanı arkadaşımız Yaşar bey ile haftaya gerçekleşecek olan mezuniyetten önce sorun yaşanmaması için kullanılacak ekipmanların sorunsuz olup olmadığını kontrol ettik
+Eczacılık bölümünün mezuniyetinde yaşanan internet bağlantı sorununu giderdik
+JWT'yi kontrol eden auth-guard.php dosyamızı oluşturduk ve JWT tokeni kullanan tüm dosyalara entegre ettik (login.php, register-lecturer.php vb)
+
+
+2. hafta
+30 haziran 6. gün 
+sağlık fakültesinin öğrencilerinin sınavının olması sebebiyle ve  mac dönüştürücümüz olmadığı için 2 saat internetimiz olmadı, bugün geç başladık
+sistemimize yeni akademisyen kayıt olmasını sağlayan register-lecturer.php dosyamızı oluşturduk 
+Postman ile bu dosyamızı test ettik ve eklenen verilerin veritabanına eklendiğinden emin olduk
+
+1 temmuz 7. gün
+bugün tüm gün olan sınavlardan dolayı internetimiz yoktu yazılım kısmında ilerleyemedik, bugün sistem uzmanımız Enes bey ile yaz okulu öncesinde hukuk fakültesindeki sınıfların eksikliklerini kontrol ettik
+hukuk fakültesi 3. kattaki tüm sınıfları kontrol ettik ve eksiklikleri depodan getirerek tamamladık. toplam 4 vga kablosu, 1 ethernet kablosu ve 2 projeksiyon hatası giderdik
+
+2 temmuz 8. gün
+sistemimize yeni admin ekleyen create-admin.php dosyamızı oluşturduk 
+bu dosyanın yalnızca adminler tarafından kullanılabilmesini sağladık, işlemi yapabilmek için login ile giriş yapan kişinin tokeninin admin olması gerekli
+bugün back-end kodumuzu bitirdik ve front-end kısmına başladık
+bootstrap tanımlarını öğrendik
+html, css ve js kodlarının tanımlarını öğrendik
+front-end kısmımız için gereken dosyaları oluşturduk
+bootstrap'i indirerek içerisindeki js ve css dosyalarını projemize ekledik
+html ile bootstrapi birbirine bağladık
+
+3 temmuz 9. gün
+oluşturduğumuz websitesinin giriş ekranını yaptık ve tasarımını kendimize göre düzenledik (sign-in.php)
+hesabı olmayanların hesap açabileceği sayfası yaptık ve tasarımını düzenledik (register.php)
+bu sayfaları birbirine bağladık ve bilgileri veri tabanına gönderip alabilme özelliğini ekledik (hesap oluştur, hesabınız varsa giriş yapın)
+bize verilen engine.js kodlarını projemize entegre ettik (engine.js)
+kullanıcı bilgilerini javascript aracılığıyla back-end’e gönderecek ve gelen cevaba göre aksiyon almamıza yarayan metodları barından Auth.js kodunu yazdık
+başarılı giriş yapıldığında (admin-user) role özel sayfaya giriş yapan kodu yazdık
+
+4 temmuz 10. gün
+kayıt olma sayfamızdan oluşturulan hesabın bilgilerinin veritabanına gönderilmesini ve kayıt edilmesini sağladık
+kullanıcı sayfasından giriş yapılmamasına rağmen sayfa urlsini değiştirerek içeri girilmesini önledik
+
+
+3. hafta
+7 temmuz 11. gün
+
+
+
